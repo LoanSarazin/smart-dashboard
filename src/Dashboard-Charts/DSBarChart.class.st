@@ -11,7 +11,7 @@ Class {
 DSBarChart class >> dashboardDescription [ 
 
 	^ DSChartDescription new
-			kind: (DSSingleDomain domain: DSNumber);
+			kind: {DSSingleDomain domain: DSNumber range: (DSRange between: 2 and: 20)};
 			populationSize: (DSRange between: 1 and: 4);
 			yourself
 ]
@@ -48,10 +48,8 @@ DSBarChart >> draw [
 		asFloat: 5;
 		useVerticalLabel; 
 		yourself).
-	
-	c build.
-
-	^ c canvas
+		
+	^ c
 ]
 
 { #category : #drawing }

@@ -13,7 +13,7 @@ DSBuilder class >> consume: aCollection as: aClass [
 { #category : #'instance creation' }
 DSBuilder class >> consume: aCollection asAllOf: aClass [ 
 	
-	^ aCollection collect: [ :each |  self  consume: each as: aClass ]
+	^ { DSSingleDomain data: aCollection of: aClass }
 
 ]
 

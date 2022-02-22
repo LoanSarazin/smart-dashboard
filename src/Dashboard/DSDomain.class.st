@@ -8,6 +8,12 @@ Class {
 }
 
 { #category : #accessing }
+DSDomain >> canAcceptKind: aDataDescriptionList [
+
+	^ { }
+]
+
+{ #category : #accessing }
 DSDomain >> data: aPoint [ 
 	data := aPoint
 ]

@@ -11,9 +11,9 @@ Class {
 DSPieChart class >> dashboardDescription [ 
 
 	^ DSChartDescription new
-		kind: DSNumber;
-		populationSize: (DSRange between: 2 and: 6);
-		yourself 
+			kind: {DSSingleDomain domain: DSNumber range: (DSRange between: 3 and: 6)};
+			populationSize: (DSRange exactly: 1);
+			yourself
 ]
 
 { #category : #examples }
@@ -33,15 +33,16 @@ DSPieChart >> draw [
 		objects: collection;
 		yourself.
 	pie sliceShape
-		segmentSpacing: 5;
-		innerRadius: 50;
+		segmentSpacing: 0;
+		innerRadius: 0;
 		externalRadius: 200;
 		withBorder.
 	pie
 		sliceColor: NSScale google20;
 		build.
 	pie canvas zoomToFit.
-	^ pie canvas
+	
+	^ pie
 ]
 
 { #category : #drawing }

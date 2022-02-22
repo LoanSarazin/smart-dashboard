@@ -13,8 +13,8 @@ Class {
 DSScatterPlotWithError class >> dashboardDescription [
 
 	^ DSChartDescription new
-			kind: DS2D5Point ;
-			populationSize: (DSRange between: 10 and: 300);
+			kind: {DSSingleDomain domain: DS2D5Point range: (DSRange between: 10 and: 300)};
+			populationSize: (DSRange exactly: 1);
 			yourself
 	
 ]

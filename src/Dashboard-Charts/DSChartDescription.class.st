@@ -11,14 +11,15 @@ Class {
 { #category : #testing }
 DSChartDescription >> canAccept: aDescribedCollection [
 	
-	^ (self canAcceptKind: aDescribedCollection first kind )
-		and: [ self canAcceptSize: aDescribedCollection size] 
+	^ (aDescribedCollection allSatisfy: [ :each | self canAcceptKind: each ])
+		and: [ self canAcceptSize: aDescribedCollection size ] 
 ]
 
 { #category : #testing }
-DSChartDescription >> canAcceptKind: aClass [ 
+DSChartDescription >> canAcceptKind: aDataDescription [
+"check if the description of the datas match the ones accepted by the chart"
 	
-	^ kind = aClass
+	^ aDataDescription canAcceptKind: kind
 ]
 
 { #category : #testing }
@@ -27,8 +28,8 @@ DSChartDescription >> canAcceptSize: anInteger [
 ]
 
 { #category : #accessing }
-DSChartDescription >> kind: aClass [ 
-	kind := aClass
+DSChartDescription >> kind: aDataDescriptionList [
+	kind := aDataDescriptionList
 ]
 
 { #category : #accessing }

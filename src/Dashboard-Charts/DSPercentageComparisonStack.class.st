@@ -12,7 +12,8 @@ Class {
 DSPercentageComparisonStack class >> dashboardDescription [
 
 	^ DSChartDescription new
-			kind: (DSCompositeDomain domains: {DSNumber . DSNumber}) ;
+			"kind: { DSCompositeDomain domains: {DSNumber . DSNumber} };"
+			kind: {};
 			populationSize: (DSRange between: 3 and: 15);
 			yourself
 	

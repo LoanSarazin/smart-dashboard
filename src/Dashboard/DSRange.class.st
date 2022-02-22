@@ -21,6 +21,15 @@ DSRange class >> between: anInteger and: anInteger2 [
 			yourself
 ]
 
+{ #category : #'instance creation' }
+DSRange class >> exactly: anInteger [
+
+	^ self new
+			minimumAmount: anInteger;
+			maximumAmount: anInteger;
+			yourself
+]
+
 { #category : #testing }
 DSRange >> isWithin: anInteger [ 
 	^ anInteger between: minimumAmount and: maximumAmount  
