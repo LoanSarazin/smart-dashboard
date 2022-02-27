@@ -4,15 +4,19 @@ Class {
 	#instVars : [
 		'collection'
 	],
-	#category : #'Dashboard-Charts-Domain'
+	#category : #'Dashboard-Charts-Chart-Domain'
 }
 
 { #category : #examples }
 DSBarChart class >> dashboardDescription [ 
 
 	^ DSChartDescription new
-			kind: {DSSingleDomain domain: DSNumber range: (DSRange between: 2 and: 20)};
-			populationSize: (DSRange between: 1 and: 4);
+			kind: {
+			DSSingleDomain
+				domain: (DSSingleDomain
+					domain: DSNumber
+					range: (DSRange between: 2 and: 20))
+				range: (DSRange between: 1 and: 4)};
 			yourself
 ]
 

@@ -6,7 +6,7 @@ Class {
 		'yValues',
 		'errorValues'
 	],
-	#category : #'Dashboard-Charts-Domain'
+	#category : #'Dashboard-Charts-Chart-Domain'
 }
 
 { #category : #examples }
@@ -14,7 +14,6 @@ DSScatterPlotWithError class >> dashboardDescription [
 
 	^ DSChartDescription new
 			kind: {DSSingleDomain domain: DS2D5Point range: (DSRange between: 10 and: 300)};
-			populationSize: (DSRange exactly: 1);
 			yourself
 	
 ]

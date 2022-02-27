@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'c'
 	],
-	#category : #'Dashboard-Charts-Domain'
+	#category : #'Dashboard-Charts-Chart-Domain'
 }
 
 { #category : #description }

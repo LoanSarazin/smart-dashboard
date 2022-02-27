@@ -4,17 +4,25 @@ Class {
 	#instVars : [
 		'collection'
 	],
-	#category : #'Dashboard-Charts-Domain'
+	#category : #'Dashboard-Charts-Chart-Domain'
 }
 
 { #category : #examples }
 DSBoxPlot class >> dashboardDescription [ 
 
 	^ DSChartDescription new
-			kind: {DSSingleDomain
-				domain: (DSSingleDomain domain: DSNumber range: (DSRange between: 10 and: 10000))
-				range: (DSRange between: 1 and: 20)};
-			populationSize: (DSRange between: 1 and: 4);
+			kind: {
+				DSSingleDomain
+					domain: (DSSingleDomain 
+						domain: (DSSingleDomain 
+							domain: DSNumber
+							"number of datas per series"
+							range: (DSRange between: 8 and: 10000))
+						"number of categories"
+						range: (DSRange between: 1 and: 4))
+					"number of groups of categories (i.e. general series)"
+					range: (DSRange between: 1 and: 20)
+					};
 			yourself
 ]
 

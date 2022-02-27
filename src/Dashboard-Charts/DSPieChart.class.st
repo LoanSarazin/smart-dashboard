@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'collection'
 	],
-	#category : #'Dashboard-Charts-Domain'
+	#category : #'Dashboard-Charts-Chart-Domain'
 }
 
 { #category : #description }
@@ -12,7 +12,6 @@ DSPieChart class >> dashboardDescription [
 
 	^ DSChartDescription new
 			kind: {DSSingleDomain domain: DSNumber range: (DSRange between: 3 and: 6)};
-			populationSize: (DSRange exactly: 1);
 			yourself
 ]
 
