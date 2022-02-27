@@ -13,10 +13,10 @@ Class {
 }
 
 { #category : #'instance creation' }
-DSRange class >> between: anInteger and: anInteger2 [ 
+DSRange class >> between: anInteger1 and: anInteger2 [ 
 
 	^ self new
-			minimumAmount: anInteger;
+			minimumAmount: anInteger1;
 			maximumAmount: anInteger2;
 			yourself
 ]
@@ -31,13 +31,26 @@ DSRange class >> exactly: anInteger [
 ]
 
 { #category : #testing }
-DSRange >> isWithin: anInteger [ 
+DSRange >> isWithin: anInteger [
+
 	^ anInteger between: minimumAmount and: maximumAmount  
+]
+
+{ #category : #accessing }
+DSRange >> maximumAmount [
+
+	^ maximumAmount
 ]
 
 { #category : #accessing }
 DSRange >> maximumAmount: anInteger [ 
 	maximumAmount := anInteger
+]
+
+{ #category : #accessing }
+DSRange >> minimumAmount [ 
+
+	^ minimumAmount
 ]
 
 { #category : #accessing }

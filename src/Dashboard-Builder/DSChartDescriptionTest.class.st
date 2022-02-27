@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'des'
 	],
-	#category : #'Dashboard-Charts-Tests'
+	#category : #'Dashboard-Builder-Tests'
 }
 
 { #category : #tests }
