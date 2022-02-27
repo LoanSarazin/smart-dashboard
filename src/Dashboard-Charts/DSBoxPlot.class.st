@@ -17,7 +17,7 @@ DSBoxPlot class >> dashboardDescription [
 						domain: (DSSingleDomain 
 							domain: DSNumber
 							"number of datas per series"
-							range: (DSRange between: 8 and: 10000))
+							range: (DSRange between: 8 and: Float infinity))
 						"number of categories"
 						range: (DSRange between: 1 and: 4))
 					"number of groups of categories (i.e. general series)"
