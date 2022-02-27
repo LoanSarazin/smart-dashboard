@@ -1,5 +1,5 @@
 Class {
-	#name : #DSTemperature,
-	#superclass : #DSNumber,
+	#name : #DSGeoCoord,
+	#superclass : #DS2DPoint,
 	#category : #'Dashboard-Datas-Data-Domain'
 }

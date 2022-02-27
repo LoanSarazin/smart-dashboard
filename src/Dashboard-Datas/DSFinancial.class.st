@@ -1,10 +1,5 @@
 Class {
-	#name : #DSWeight,
+	#name : #DSFinancial,
 	#superclass : #DSNumber,
 	#category : #'Dashboard-Datas-Data-Domain'
 }
-
-{ #category : #accessing }
-DSWeight >> weight [
-	^ data
-]

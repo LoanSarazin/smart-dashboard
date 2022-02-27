@@ -1,5 +1,5 @@
 Class {
-	#name : #DSTemperature,
-	#superclass : #DSNumber,
+	#name : #DSAge,
+	#superclass : #DSEnumerated,
 	#category : #'Dashboard-Datas-Data-Domain'
 }

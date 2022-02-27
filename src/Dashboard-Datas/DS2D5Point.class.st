@@ -1,9 +1,6 @@
 Class {
 	#name : #DS2D5Point,
 	#superclass : #DS2DPoint,
-	#instVars : [
-		'error'
-	],
 	#category : #'Dashboard-Datas-Data-Domain'
 }
 

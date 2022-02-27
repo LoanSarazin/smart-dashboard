@@ -7,5 +7,5 @@ Class {
 { #category : #testing }
 DSEnumerated class >> canDescribe: aData [
 
-	^ aData isString or: [ aData isNumber ]
+	^ aData isLiteral or: [ aData isNumber ]
 ]
