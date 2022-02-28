@@ -11,12 +11,15 @@ Class {
 DSBarChart class >> dashboardDescription [ 
 
 	^ DSChartDescription new
-			kind: {
-			DSSingleDomain
-				domain: (DSSingleDomain
-					domain: DSNumber
-					range: (DSRange between: 2 and: 20))
-				range: (DSRange between: 1 and: 4)};
+			descriptions: {
+			DSDataDescription domain: (
+				DSSingleDomain
+					domain: (DSSingleDomain
+						domain: DSNumber
+						range: (DSRange between: 2 and: 20)
+						)
+					range: (DSRange between: 1 and: 4)
+				)};
 			yourself
 ]
 

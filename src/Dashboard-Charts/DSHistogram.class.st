@@ -11,10 +11,13 @@ Class {
 DSHistogram class >> dashboardDescription [
 
 	^ DSChartDescription new
-			kind: {
-				DSSingleDomain domain: DSNumber range: (DSRange between: 10 and: Float infinity).
-				DSSingleDomain domain: DSEnumerated range: (DSRange between: 10 and: Float infinity)
-				};
+			descriptions: {
+				DSDataDescription domain: (
+					DSSingleDomain domain: DSNumber range: (DSRange between: 10 and: Float infinity)
+					).
+				DSDataDescription domain: (
+					DSSingleDomain domain: DSEnumerated range: (DSRange between: 10 and: Float infinity)
+				)};
 			yourself
 	
 ]

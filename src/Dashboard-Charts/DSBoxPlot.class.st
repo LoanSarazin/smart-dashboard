@@ -11,18 +11,21 @@ Class {
 DSBoxPlot class >> dashboardDescription [ 
 
 	^ DSChartDescription new
-			kind: {
+			descriptions: {
+			DSDataDescription domain: (
 				DSSingleDomain
 					domain: (DSSingleDomain 
 						domain: (DSSingleDomain 
 							domain: DSNumber
 							"number of datas per series"
-							range: (DSRange between: 8 and: Float infinity))
+							range: (DSRange between: 8 and: Float infinity)
+							)
 						"number of categories"
-						range: (DSRange between: 1 and: 4))
+						range: (DSRange between: 1 and: 4)
+						)
 					"number of groups of categories (i.e. general series)"
 					range: (DSRange between: 1 and: 20)
-					};
+				)};
 			yourself
 ]
 

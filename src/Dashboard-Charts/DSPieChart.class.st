@@ -11,7 +11,10 @@ Class {
 DSPieChart class >> dashboardDescription [ 
 
 	^ DSChartDescription new
-			kind: {DSSingleDomain domain: DSNumber range: (DSRange between: 3 and: 6)};
+			descriptions: {
+			DSDataDescription domain: (
+				DSSingleDomain domain: DSNumber range: (DSRange between: 3 and: 6)
+			)};
 			yourself
 ]
 

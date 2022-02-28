@@ -1,5 +1,5 @@
 Class {
-	#name : #DSScatterPlotWithError,
+	#name : #DSBubblePlot,
 	#superclass : #DSChart,
 	#instVars : [
 		'xValues',
@@ -10,16 +10,19 @@ Class {
 }
 
 { #category : #examples }
-DSScatterPlotWithError class >> dashboardDescription [
+DSBubblePlot class >> dashboardDescription [
 
 	^ DSChartDescription new
-			kind: {DSSingleDomain domain: DS2D5Point range: (DSRange between: 10 and: 300)};
+			descriptions: {
+			DSDataDescription domain: (
+				DSSingleDomain domain: DS2D5Point range: (DSRange between: 10 and: 300)
+				)};
 			yourself
 	
 ]
 
 { #category : #examples }
-DSScatterPlotWithError class >> example [
+DSBubblePlot class >> example [
 	<script>
 	
 	| ch |
@@ -29,7 +32,7 @@ DSScatterPlotWithError class >> example [
 ]
 
 { #category : #drawing }
-DSScatterPlotWithError >> draw [
+DSBubblePlot >> draw [
 
 	| p |
 	p := RSScatterPlot new x: xValues y: yValues.
@@ -54,7 +57,7 @@ DSScatterPlotWithError >> draw [
 ]
 
 { #category : #drawing }
-DSScatterPlotWithError >> fill [ 
+DSBubblePlot >> fill [ 
 
 	 xValues := #(2 4 13 7 13 7 5 11 13 8 4 19 17 5 12 8 10 17 5 16 30 23 3 22 29 8 31 29 26 24 26 32 15 34 14 29 30 24 33 16 10 12 28 30 14 30 14 17 18 27 28 13 30 22 43 41 12 20 67 33 62 4 28 35 8 69 37 53 64 59 27 35 69 52 76 27 46 55 64 41 15 31 24 73 33 63 77 54 34 68 25 32 93 13 4 97 89 23 34 73).
 	yValues :=  #(7 5 8 4 6 8 11 14 9 7 3 14 18 7 17 11 8 20 17 9 17 25 19 19 9 14 15 16 6 11 20 30 18 37 21 23 22 18 16 5 32 14 14 7 17 34 15 28 5 43 49 47 18 20 30 27 18 58 56 56 38 10 48 56 10 32 22 19 12 22 79 20 42 21 70 12 46 49 34 73 79 32 36 56 14 29 68 54 81 62 58 34 49 69 45 56 68 50 59 55).

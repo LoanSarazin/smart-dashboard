@@ -2,7 +2,7 @@ Class {
 	#name : #DSChartDescription,
 	#superclass : #Object,
 	#instVars : [
-		'kind',
+		'descriptions',
 		'acceptedChartDescription'
 	],
 	#category : #'Dashboard-Charts-Chart-Domain'
@@ -11,14 +11,14 @@ Class {
 { #category : #testing }
 DSChartDescription >> canAccept: aCollection describedBy: aDataDescription [
 	^ ((aDataDescription canDescribe: aCollection)
-		and: [ self canAcceptKind: aDataDescription ])
+		and: [ self canAcceptDescriptions: aDataDescription ])
 		and: [ self canAcceptSize: aCollection ]
 ]
 
 { #category : #testing }
-DSChartDescription >> canAcceptKind: aDataDescription [
+DSChartDescription >> canAcceptDescriptions: aDataDescription [
 "check if the description of the datas match one of the description accepted by the chart"
-	^ kind anySatisfy: [ :aChartDescription |
+	^ descriptions anySatisfy: [ :aChartDescription |
 		(aChartDescription canAcceptDomain: aDataDescription)
 			ifTrue: (acceptedChartDescription :=  aChartDescription);
 			yourself
@@ -32,11 +32,13 @@ DSChartDescription >> canAcceptSize: aCollection [
 ]
 
 { #category : #accessing }
-DSChartDescription >> kind [
-	^ kind
+DSChartDescription >> descriptions [
+
+	^ descriptions
 ]
 
 { #category : #accessing }
-DSChartDescription >> kind: aDescriptionList [
-	kind := aDescriptionList
+DSChartDescription >> descriptions: aDescriptionList [
+
+	descriptions := aDescriptionList
 ]

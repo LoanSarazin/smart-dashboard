@@ -117,5 +117,5 @@ DSChartDescriptionTest >> testIsBuilderSelectingScatterPlot [
 	wrappedData := b 
 		consume: data
 		asAllOf: DS2D5Point.
-	self assert: (b chartFor: data describedBy: wrappedData) first equals: DSScatterPlotWithError  
+	self assert: (b chartFor: data describedBy: wrappedData) first equals: DSBubblePlot  
 ]
